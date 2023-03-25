@@ -4,7 +4,8 @@
     "description": "node.js on docker",
     "main": "volodymyr-app.js",
     "scripts": {
-      "start": "node volodymyr-app.js"
+      "start": "node volodymyr-app.js",
+      "test": "echo \"Warning: no test specified for this project\""
     },
     "dependencies": {
       "express": "^4.16.1"
