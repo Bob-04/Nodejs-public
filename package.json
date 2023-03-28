@@ -4,9 +4,12 @@
     "description": "node.js on docker",
     "main": "volodymyr-app.js",
     "scripts": {
-      "start": "node volodymyr-app.js"
+        "start": "node volodymyr-app.js",
+        "test": "echo \"Warning: no test specified for this project\"",
+        "lint": "eslint ."
     },
     "dependencies": {
-      "express": "^4.16.1"
+        "express": "^4.16.1",
+        "eslint": "^8.36.0"
     }
-  }
+}
