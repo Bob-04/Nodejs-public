@@ -5,16 +5,11 @@
     "main": "volodymyr-app.js",
     "scripts": {
         "start": "node volodymyr-app.js",
-        "test": "echo \"Warning: no test specified for this project\""
+        "test": "echo \"Warning: no test specified for this project\"",
+        "lint": "eslint ."
     },
     "dependencies": {
-        "express": "^4.16.1"
-    },
-    "devDependencies": {
-        "eslint": "^8.36.0",
-        "eslint-config-standard": "^17.0.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-n": "^15.6.1",
-        "eslint-plugin-promise": "^6.1.1"
+        "express": "^4.16.1",
+        "eslint": "^8.36.0"
     }
 }
