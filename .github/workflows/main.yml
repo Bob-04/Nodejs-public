@@ -68,7 +68,7 @@ jobs:
       - name: Run the Docker image
         run: |
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/volodymyr-app:latest
-          docker run -d -p 80:80 --name my-node-app ${{ secrets.DOCKERHUB_USERNAME }}/volodymyr-app:latest
+          docker run -d -p 80:8080 --name my-node-app ${{ secrets.DOCKERHUB_USERNAME }}/volodymyr-app:latest
 
       - name: Check the Docker image
         run: |

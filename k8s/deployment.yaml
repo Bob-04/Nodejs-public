@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: volodymyr-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: volodymyr-app
+  template:
+    metadata:
+      labels:
+        app: volodymyr-app
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d
+        - name: volodymyr-app
+          image: volodymyr04/volodymyr-app:latest
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          ports:
+            - containerPort: 8080
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-config
